@@ -1,14 +1,19 @@
 var xhr; // define the global variable to process the AJAX request
 function callDivChange() {
+// 		xhr = new XMLHttpRequest();
+// 		xhr.open("GET", "test1.html", true);
+// 		xhr.onreadystatechange = processDivChange;
+// 		try {
+// 			xhr.setRequestHeader("Content-Type", "application/x-www-formurlencoded");
+// 		}
+// 		catch (e) {
+// // this only works in internet explorer
+// 		}
+// 		xhr.send();
 		xhr = new XMLHttpRequest();
-		xhr.open("GET", "test1.html", true);
+		var filename = document.getElementById("filename").value;
+		xhr.open("GET", filename, true);
 		xhr.onreadystatechange = processDivChange;
-		try {
-			xhr.setRequestHeader("Content-Type", "application/x-www-formurlencoded");
-		}
-		catch (e) {
-// this only works in internet explorer
-		}
 		xhr.send();
 }
 function processDivChange() {
