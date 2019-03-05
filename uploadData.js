@@ -4,6 +4,7 @@ function startDataUpload() {
 	var module = document.getElementById("module").value;
 	var postString = "name="+name +"&surname="+surname+"&module="+module;
 	alert (postString);
+	processData(postString); //call processData to run
 }
 
 var client; // the global variable that holds the request
